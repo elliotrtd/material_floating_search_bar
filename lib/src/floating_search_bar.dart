@@ -942,7 +942,7 @@ class FloatingSearchBarController {
 
   /// Whether the [FloatingSearchBar] is currently
   /// closed/collapsed.
-  bool get isClosed => _appBarState?.isOpen == false;
+  bool get isClosed => _appBarState?.isOpen != true;
 
   /// Whether the [FloatingSearchBar] is currently
   /// not hidden.
@@ -950,7 +950,7 @@ class FloatingSearchBarController {
 
   /// Whether the [FloatingSearchBar] is currently
   /// not visible.
-  bool get isHidden => _searchBarState?.isVisible == false;
+  bool get isHidden => _searchBarState?.isVisible != true;
 
   /// Disposes this controller.
   void dispose() {
